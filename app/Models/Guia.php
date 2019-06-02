@@ -20,4 +20,12 @@ class Guia extends Model
     {
         return $this->belongsTo(Paciente::class);
     }
+
+    /**
+     * Possui um atendimento
+     */
+    public function atendimento()
+    {
+        return $this->hasOne(Atendimento::class);
+    }
 }
