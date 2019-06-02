@@ -13,4 +13,12 @@ class Atendimento extends Model
         'inicio',
         'fim'
     ];
+
+    /**
+     * Pertence a uma guia
+     */
+    public function guia()
+    {
+        return $this->belongsTo(Guia::class);
+    }
 }
