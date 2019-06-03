@@ -14,7 +14,7 @@ class CreateAtendimentosTable extends Migration
     public function up()
     {
         Schema::create('atendimentos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->primaryKey();
             $table->integer('guia_id')->unsigned();
             $table->foreign('guia_id')->references('id')->on('guias');
             $table->string('CID');

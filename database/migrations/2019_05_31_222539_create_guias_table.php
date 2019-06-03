@@ -14,7 +14,7 @@ class CreateGuiasTable extends Migration
     public function up()
     {
         Schema::create('guias', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->primaryKey();
             $table->integer('paciente_id')->unsigned()->nullable();
             $table->foreign('paciente_id')->references('id')->on('pacientes');
             $table->date('data_emissao');
