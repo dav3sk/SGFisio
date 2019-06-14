@@ -12,6 +12,7 @@
         "fideloper/proxy": "^4.0",
         "jeroennoten/laravel-adminlte": "^1.25",
         "kris/laravel-form-builder": "^1.20",
+        "laracasts/flash": "^3.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0"
     },
