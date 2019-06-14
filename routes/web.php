@@ -22,9 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Rotas Pacientes
 Route::group(['prefix' => 'pacientes'], function () {
     Route::get('/', 'PacienteController@index')->name('paciente.index');
-    Route::get('/create', [
-        'uses' => 'PacienteController@create',
-        'as' => 'paciente.create'
-    ]);
+    Route::get('/create', 'PacienteController@create')->name('paciente.create');
     Route::post('/', 'PacienteController@store')->name('paciente.store');
 });
