@@ -9,7 +9,7 @@ class Paciente extends Model
     /**
      * Atributos do paciente
      */
-    protected $atributos = [
+    protected $fillable = [
         'nome',
         'sexo',
         'data_nascimento',
