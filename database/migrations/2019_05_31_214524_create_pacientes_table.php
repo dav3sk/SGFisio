@@ -25,6 +25,7 @@ class CreatePacientesTable extends Migration
             $table->string('cidade');
             $table->string('estado');
             $table->string('telefone');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
