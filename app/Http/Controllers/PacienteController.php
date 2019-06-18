@@ -18,7 +18,11 @@ class PacienteController extends Controller
     {
         $pacientes = Paciente::all();
 
-        return $pacientes;
+        // return $pacientes; // Isso aqui retorna só o JSON
+
+        return view('paciente.index', [
+            'pacientes' => $pacientes
+        ]);
     }
 
     /**
