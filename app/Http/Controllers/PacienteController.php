@@ -48,17 +48,17 @@ class PacienteController extends Controller
     {
         $paciente = new Paciente($request->all());
 
-        // try {
+        try {
             $paciente->save();
 
-        //     return redirect()
-        //         ->route('assisteds.index')
-        //         ->with('alert-success', 'Assistido cadastrado com sucesso!');
-        // } catch (\Exception $e) {
-        //     return redirect()
-        //         ->back()
-        //         ->with('alert-danger', 'Falha no cadastro do assistido!' . $e->getMessage());
-        // }
+            return redirect()
+                ->route('paciente.index')
+                ->with('alert-success', 'Paciente cadastrado com sucesso!');
+        } catch (\Exception $e) {
+            return redirect()
+                ->back()
+                ->with('alert-danger', 'Falha no cadastro do paciente!' . $e->getMessage());
+        }
     }
 
     /**
@@ -67,9 +67,11 @@ class PacienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Paciente $paciente)
     {
-        //
+        return view('paciente.show', [
+            'paciente' => $paciente
+        ]);
     }
 
     /**
@@ -78,9 +80,17 @@ class PacienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Paciente $paciente)
     {
-        //
+        $form = $this->formBuilder->create(Paciente::class, [
+            'url' => route('paciente.update', $paciente->id),
+            'method' => 'PUT',
+            'model' => $paciente
+        ]);
+
+        return view('paciente.edit', [
+            'form' => $form
+        ]);
     }
 
     /**
@@ -90,9 +100,21 @@ class PacienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Paciente $paciente)
     {
-        //
+        $paciente->update($request->all());
+
+        try {
+            $paciente->save();
+
+            return redirect()
+                ->route('paciente.show', $paciente->id)
+                ->with('alert-success', 'Paciente atualizado com sucesso!');
+        } catch (\Exception $e) {
+            return redirect()
+                ->back()
+                ->with('alert-danger', 'Falha na atualização do paciente!');
+        }
     }
 
     /**
