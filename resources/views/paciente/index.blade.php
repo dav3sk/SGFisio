@@ -12,11 +12,6 @@
 
 @section('content')
     <div class="box">
-        <div class="box-header with-border">
-            <div class="pull-right">
-                <a class="btn btn-xs btn-primary" href="{{ route('pacientes.create') }}">Cadastrar paciente</a>
-            </div>
-        </div>
         <!-- /.box-header -->
         <div class="box-body">
             <table class="table table-bordered table-condensed">
@@ -35,14 +30,14 @@
                             <td>{{ $paciente->nome }}</td>
                             <td>{{ $paciente->cpf }}</td>
                             <td>
-                                <a class="btn btn-xs btn-primary" href="{{ route('pacientes.show', $paciente->id) }}">
-                                    Visualizar
+                                <a class="btn btn-xs" href="{{ route('pacientes.show', $paciente->id) }}">
+                                    <i class="fa fa-eye" style="font-size: 20px;"></i>
                                 </a>
-                                <a class="btn btn-xs btn-warning" href="{{ route('pacientes.edit', $paciente->id) }}">
-                                    Editar
+                                <a class="btn btn-xs" href="{{ route('pacientes.edit', $paciente->id) }}">
+                                    <i class="fa fa-edit" style="font-size: 20px;"></i>
                                 </a>
-                                <a class="btn btn-xs btn-danger paciente-destroy" data-id="{{ $paciente->id }}">
-                                    Excluir
+                                <a class="btn btn-xs paciente-destroy" data-id="{{ $paciente->id }}">
+                                    <i class="fa fa-trash" style="font-size: 20px;"></i>
                                 </a>
                             </td>
                         </tr>
