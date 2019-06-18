@@ -15,7 +15,7 @@
         <div class="box box-primary">
             <div class="box-header with-border">
                 <div class="pull-right">
-                    <a class="btn btn-xs btn-primary" href="{{ route('paciente.edit', $paciente->id) }}">Editar paciente</a>
+                    <a class="btn btn-xs btn-primary" href="{{ route('pacientes.edit', $paciente->id) }}">Editar paciente</a>
                 </div>
             </div>
             <!-- /.box-header -->
