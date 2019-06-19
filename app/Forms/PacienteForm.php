@@ -40,7 +40,7 @@ class PacienteForm extends Form
                 'rules' => 'required|string'
             ])
             ->add('telefone', Field::TEXT, [
-                'label' => 'telefone',
+                'label' => 'Telefone',
                 'rules' => 'required|string'
             ])
             ->add('submit', Field::BUTTON_SUBMIT, [
