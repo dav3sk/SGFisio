@@ -11,34 +11,43 @@
 @stop
 
 @section('content')
-    <div class="col-md-8 col-md-offset-2">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <div class="pull-right">
-                    <a class="btn btn-xs btn-primary" href="{{ route('pacientes.edit', $paciente->id) }}">Editar paciente</a>
+    @include('helpers._button_voltar', [
+        'rota' => 'pacientes.index'
+    ])
+
+    <table class="table table-bordered table-condensed">
+        <tbody>
+            <div class="col-md-6">
+                <div class="box box-success" style="border: 1px solid #d2d6de;">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Informações Pessoais</h3>
+                    </div>
+                    
+                    <div class="box-body">
+                        <p> <b>Nome:</b> {{ $paciente->nome }} </p>
+                        <p> <b>Sexo:</b> {{ $paciente->sexo }} </p>
+                        <p> <b>Data de Nascimento:</b> {{ date('d/m/Y', strtotime($paciente->data_nascimento)) }} </p>
+                        <p> <b>CPF:</b> {{ $paciente->cpf }} </p>
+                        <p> <b>Telefone:</b> {{ $paciente->telefone }} </p>
+                    </div>
                 </div>
             </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-                <div class="col-md-6">
-                    <h2>Informações Pessoais</h2>
+    
+            <div class="col-md-6">
+                <div class="box box-success" style="border: 1px solid #d2d6de;">
 
-                    <p> <b>Nome:</b> {{ $paciente->nome }} </p>
-                    <p> <b>Sexo:</b> {{ $paciente->sexo }} </p>
-                    <p> <b>Data de Nascimento:</b> {{ date('d/m/Y', strtotime($paciente->data_nascimento)) }} </p>
-                    <p> <b>CPF:</b> {{ $paciente->cpf }} </p>
-                    <p> <b>Telefone:</b> {{ $paciente->telefone }} </p>
-                </div>
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Endereço</h3>
+                    </div>
 
-                <div class="col-md-6">
-                    <h2>Endereço</h2>
-
-                    <p> <b>Cidade:</b> {{ $paciente->cidade }} </p>
-                    <p> <b>Estado:</b> {{ $paciente->estado }} </p>
+                    <div class="box-body">
+                        <p> <b>Cidade:</b> {{ $paciente->cidade }} </p>
+                        <p> <b>Estado:</b> {{ $paciente->estado }} </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </tbody>
+    </table>
 @stop
 
 @section('js')
