@@ -27,9 +27,21 @@ Route::group(['prefix' => 'pacientes'], function () {
     Route::get('/', 'PacienteController@index')->name('pacientes.index');
     Route::get('/{paciente}', 'PacienteController@show')->name('pacientes.show');
 
-
-    Route::delete('/{paciente}/destroy', 'PacienteController@destroy')->name('pacientes.destroy');
-
     Route::get('/{paciente}/edit', 'PacienteController@edit')->name('pacientes.edit');
     Route::put('/{paciente}', 'PacienteController@update')->name('pacientes.update');
+
+    Route::delete('/{paciente}/destroy', 'PacienteController@destroy')->name('pacientes.destroy');
+});
+
+Route::group(['prefix' => 'plantonistas'], function () {
+    Route::get('/create', 'PlantonistaController@create')->name('plantonistas.create');
+    Route::post('/', 'PlantonistaController@store')->name('plantonistas.store');
+
+    Route::get('/', 'PlantonistaController@index')->name('plantonistas.index');
+    Route::get('/{plantonista}', 'PlantonistaController@show')->name('plantonistas.show');
+
+    Route::get('/{plantonista}/edit', 'PlantonistaController@edit')->name('plantonistas.edit');
+    Route::put('/{plantonista}', 'PlantonistaController@update')->name('plantonistas.update');
+
+    Route::delete('/{plantonista}/destroy', 'PlantonistaController@destroy')->name('plantonistas.destroy');
 });
