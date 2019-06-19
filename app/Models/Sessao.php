@@ -10,7 +10,7 @@ class Sessao extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'data_realizacao',
+        'data_hora',
         'evolucao'
     ];
 
