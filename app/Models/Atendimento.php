@@ -36,4 +36,12 @@ class Atendimento extends Model
     {
         return $this->belongsTo(Guia::class);
     }
+
+    /**
+     * Possui varias sessoes
+     */
+    public function sessoes()
+    {
+        return $this->hasMany(Sessao::class);
+    }
 }
