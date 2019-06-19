@@ -49,14 +49,14 @@ Route::group(['prefix' => 'plantonistas'], function () {
 
 // Rotas Guias
 Route::group(['prefix' => 'guias'], function () {
-    Route::get('/create', 'GuiaController@create')->name('plantonistas.create');
-    Route::post('/', 'GuiaController@store')->name('plantonistas.store');
+    Route::get('/create', 'GuiaController@create')->name('guias.create');
+    Route::post('/', 'GuiaController@store')->name('guias.store');
 
-    Route::get('/', 'GuiaController@index')->name('plantonistas.index');
-    Route::get('/{plantonista}', 'GuiaController@show')->name('plantonistas.show');
+    Route::get('/', 'GuiaController@index')->name('guias.index');
+    Route::get('/{guia}', 'GuiaController@show')->name('guias.show');
 
-    Route::get('/{plantonista}/edit', 'GuiaController@edit')->name('plantonistas.edit');
-    Route::put('/{plantonista}', 'GuiaController@update')->name('plantonistas.update');
+    Route::get('/{guia}/edit', 'GuiaController@edit')->name('guias.edit');
+    Route::put('/{guia}', 'GuiaController@update')->name('guias.update');
 
-    Route::delete('/{plantonista}/destroy', 'GuiaController@destroy')->name('plantonistas.destroy');
+    Route::delete('/{guia}/destroy', 'GuiaController@destroy')->name('guias.destroy');
 });
