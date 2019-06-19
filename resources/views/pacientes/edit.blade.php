@@ -11,6 +11,9 @@
 @stop
 
 @section('content')
+    @include('helpers._button_voltar', [
+        'rota' => 'pacientes.index'
+    ])
     @include('pacientes._form', [
         'form' => $form
     ])
