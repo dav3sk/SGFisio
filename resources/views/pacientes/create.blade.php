@@ -11,7 +11,7 @@
 @stop
 
 @section('content')
-    @include('paciente._form', [
+    @include('pacientes._form', [
         'form' => $form
     ])
 @stop

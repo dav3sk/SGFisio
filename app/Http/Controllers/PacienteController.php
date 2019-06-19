@@ -20,7 +20,7 @@ class PacienteController extends Controller
 
         // return $pacientes; // Isso aqui retorna só o JSON
 
-        return view('paciente.index', [
+        return view('pacientes.index', [
             'pacientes' => $pacientes
         ]);
     }
@@ -33,11 +33,11 @@ class PacienteController extends Controller
     public function create()
     {
         $form = $this->formBuilder->create(PacienteForm::class, [
-            'url' => route('paciente.store'),
+            'url' => route('pacientes.store'),
             'method' => 'POST'
         ]);
 
-        return view('paciente.create', [
+        return view('pacientes.create', [
             'form' => $form
         ]);
     }
@@ -56,7 +56,7 @@ class PacienteController extends Controller
             $paciente->save();
 
             return redirect()
-                ->route('paciente.index')
+                ->route('pacientes.index')
                 ->with('alert-success', 'Paciente cadastrado com sucesso!');
         } catch (\Exception $e) {
             return redirect()
@@ -73,7 +73,7 @@ class PacienteController extends Controller
      */
     public function show(Paciente $paciente)
     {
-        return view('paciente.show', [
+        return view('pacientes.show', [
             'paciente' => $paciente
         ]);
     }
@@ -87,12 +87,12 @@ class PacienteController extends Controller
     public function edit(Paciente $paciente)
     {
         $form = $this->formBuilder->create(Paciente::class, [
-            'url' => route('paciente.update', $paciente->id),
+            'url' => route('pacientes.update', $paciente->id),
             'method' => 'PUT',
             'model' => $paciente
         ]);
 
-        return view('paciente.edit', [
+        return view('pacientes.edit', [
             'form' => $form
         ]);
     }
@@ -112,7 +112,7 @@ class PacienteController extends Controller
             $paciente->save();
 
             return redirect()
-                ->route('paciente.show', $paciente->id)
+                ->route('pacientes.show', $paciente->id)
                 ->with('alert-success', 'Paciente atualizado com sucesso!');
         } catch (\Exception $e) {
             return redirect()
