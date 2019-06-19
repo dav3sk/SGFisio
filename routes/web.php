@@ -33,6 +33,7 @@ Route::group(['prefix' => 'pacientes'], function () {
     Route::delete('/{paciente}/destroy', 'PacienteController@destroy')->name('pacientes.destroy');
 });
 
+// Rotas Plantonistas
 Route::group(['prefix' => 'plantonistas'], function () {
     Route::get('/create', 'PlantonistaController@create')->name('plantonistas.create');
     Route::post('/', 'PlantonistaController@store')->name('plantonistas.store');
@@ -44,4 +45,18 @@ Route::group(['prefix' => 'plantonistas'], function () {
     Route::put('/{plantonista}', 'PlantonistaController@update')->name('plantonistas.update');
 
     Route::delete('/{plantonista}/destroy', 'PlantonistaController@destroy')->name('plantonistas.destroy');
+});
+
+// Rotas Guias
+Route::group(['prefix' => 'guias'], function () {
+    Route::get('/create', 'GuiaController@create')->name('plantonistas.create');
+    Route::post('/', 'GuiaController@store')->name('plantonistas.store');
+
+    Route::get('/', 'GuiaController@index')->name('plantonistas.index');
+    Route::get('/{plantonista}', 'GuiaController@show')->name('plantonistas.show');
+
+    Route::get('/{plantonista}/edit', 'GuiaController@edit')->name('plantonistas.edit');
+    Route::put('/{plantonista}', 'GuiaController@update')->name('plantonistas.update');
+
+    Route::delete('/{plantonista}/destroy', 'GuiaController@destroy')->name('plantonistas.destroy');
 });
