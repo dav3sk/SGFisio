@@ -86,7 +86,7 @@ class PacienteController extends Controller
      */
     public function edit(Paciente $paciente)
     {
-        $form = $this->formBuilder->create(Paciente::class, [
+        $form = $this->formBuilder->create(PacienteForm::class, [
             'url' => route('pacientes.update', $paciente->id),
             'method' => 'PUT',
             'model' => $paciente
