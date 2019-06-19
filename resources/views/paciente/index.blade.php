@@ -74,6 +74,7 @@
                                 window.location.reload();
                             },
                             error: function (xhr) {
+                                console.log(xhr);
                                 swal("Falha!", "Paciente não pôde ser excluído", "error");
                             }
                         });
