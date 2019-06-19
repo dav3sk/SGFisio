@@ -7,7 +7,7 @@
 
 @section('content_header')
     @include('helpers.flash-message')
-    <h1>Paciente {{ $plantonista->nome }}</h1>
+    <h1>Plantonista {{ $plantonista->nome }}</h1>
 @stop
 
 @section('content')
@@ -24,10 +24,11 @@
                     <h2>Informações Pessoais</h2>
 
                     <p> <b>Nome:</b> {{ $plantonista->nome }} </p>
+                    <p> <b>E-mail:</b> {{ $plantonista->email }} </p>
                     <p> <b>Sexo:</b> {{ $plantonista->sexo }} </p>
                     <p> <b>Data de Nascimento:</b> {{ date('d/m/Y', strtotime($plantonista->data_nascimento)) }} </p>
                     <p> <b>CPF:</b> {{ $plantonista->cpf }} </p>
-                    <p> <b>Crefitp:</b> {{ $plantonista->crefito }} </p>
+                    <p> <b>Crefito:</b> {{ $plantonista->crefito }} </p>
                     <p> <b>Telefone:</b> {{ $plantonista->telefone }} </p>
                 </div>
 

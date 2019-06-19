@@ -16,6 +16,11 @@
                 </div>
 
                 <div class="form-group">
+                    {!! form_label($form->email) !!}
+                    {!! form_widget($form->email) !!}
+                </div>
+
+                <div class="form-group">
                     {!! form_label($form->cpf) !!}
                     {!! form_widget($form->cpf) !!}
                 </div>
