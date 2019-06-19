@@ -3,14 +3,29 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Guia extends Model
 {
-    protected $atributos = [
+    use SoftDeletes;
+
+    protected $fillable = [
         'data_emissao',
         'diagnostico',
         'tempo_de_lesao',
         'prioridade'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'deleted_at'
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at'
     ];
 
     /**

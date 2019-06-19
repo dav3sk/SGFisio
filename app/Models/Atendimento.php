@@ -3,15 +3,30 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Atendimento extends Model
 {
-    protected $atributos = [
+    use SoftDeletes;
+
+    protected $fillable = [
         'CID',
         'tipo_atendimento',
         'quantidade_sessoes',
         'inicio',
         'fim'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'deleted_at'
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at'
     ];
 
     /**
