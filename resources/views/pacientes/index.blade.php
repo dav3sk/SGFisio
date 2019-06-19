@@ -11,7 +11,7 @@
 @stop
 
 @section('content')
-    <div class="box">
+    <div class="box box-success">
         <!-- /.box-header -->
         <div class="box-body">
             <table class="table table-bordered table-condensed">
