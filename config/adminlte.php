@@ -154,7 +154,7 @@ return [
         ],
         [
             'text' => 'Plantonistas',
-            'route'  => 'home',
+            'route'  => 'plantonistas.index',
             'icon' => 'user-circle',
             'active' => ['a']
         ]
