@@ -8,9 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Plantonista extends Model
 {
     use SoftDeletes;
-    /**
-     * Atributos do paciente
-     */
+
     protected $fillable = [
         'nome',
         'email',
