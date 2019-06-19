@@ -121,7 +121,7 @@ return [
                 [
                     'text' => 'Cadastrar',
                     'route'  => 'pacientes.create',
-                    'active' => ['pacientes']
+                    'active' => ['pacientes/create']
                 ],
                 [
                     'text' => 'Listar',
@@ -154,9 +154,19 @@ return [
         ],
         [
             'text' => 'Plantonistas',
-            'route'  => 'plantonistas.index',
             'icon' => 'user-circle',
-            'active' => ['a']
+            'submenu' => [
+                [
+                    'text' => 'Cadastrar',
+                    'route'  => 'plantonistas.create',
+                    'active' => ['plantonistas/create']
+                ],
+                [
+                    'text' => 'Listar',
+                    'route'  => 'plantonistas.index',
+                    'active' => ['plantonistas']
+                ]
+            ]
         ]
     ],
 
