@@ -26,6 +26,7 @@ class CreateAtendimentosTable extends Migration
             $table->integer('quantidade_sessoes');
             $table->date('inicio');
             $table->date('fim');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
