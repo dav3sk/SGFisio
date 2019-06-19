@@ -53,8 +53,8 @@
 @section('js')
     <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-        $('.paciente-destroy').on('click', function () {
-            var pacienteId = $(this).data('id');
+        $('.plantonista-destroy').on('click', function () {
+            var plantonistaId = $(this).data('id');
 
             swal("Confirma a exclusão do plantonista?", {
                 buttons: {
