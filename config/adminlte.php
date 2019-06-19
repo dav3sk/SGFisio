@@ -132,9 +132,19 @@ return [
         ],
         [
             'text' => 'Guias',
-            'route'  => 'home',
             'icon' => 'list-ul',
-            'active' => ['a']
+            'submenu' => [
+                [
+                    'text' => 'Cadastrar',
+                    'route'  => 'home',
+                    'active' => ['a']
+                ],
+                [
+                    'text' => 'Listar',
+                    'route'  => 'home',
+                    'active' => ['a']
+                ]
+            ]
         ],
         [
             'text' => 'Atendimentos',
