@@ -13,7 +13,7 @@ class CreateSessoesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sessoes', function (Blueprint $table) {
+        Schema::create('sessaos', function (Blueprint $table) {
             $table->bigIncrements('id')->primaryKey();
             $table->integer('atendimento_id')->unsigned()->nullable();
             $table->foreign('atendimento_id')->references('id')->on('atendimento');
@@ -33,6 +33,6 @@ class CreateSessoesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sessoes');
+        Schema::dropIfExists('sessaos');
     }
 }
