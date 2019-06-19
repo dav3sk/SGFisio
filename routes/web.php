@@ -29,5 +29,7 @@ Route::group(['prefix' => 'pacientes'], function () {
 
 
     Route::delete('/{paciente}/destroy', 'PacienteController@destroy')->name('pacientes.destroy');
+
     Route::get('/{paciente}/edit', 'PacienteController@edit')->name('pacientes.edit');
+    Route::put('/{paciente}', 'PacienteController@update')->name('pacientes.update');
 });
