@@ -16,7 +16,7 @@ class PlantonistaController extends Controller
      */
     public function index()
     {
-        $plantonista = Plantonista::all();
+        $plantonistas = Plantonista::all();
 
         return view('plantonistas.index', [
             'plantonistas' => $plantonistas
@@ -31,7 +31,7 @@ class PlantonistaController extends Controller
     public function create()
     {
         $form = $this->formBuilder->create(PlantonistaForm::class, [
-            'url' => route('plantonista.store'),
+            'url' => route('plantonistas.store'),
             'method' => 'POST'
         ]);
 
@@ -54,7 +54,7 @@ class PlantonistaController extends Controller
             $plantonista->save();
 
             return redirect()
-                ->route('plantonista.index')
+                ->route('plantonistas.index')
                 ->with('alert-success', 'Plantonista cadastrado com sucesso!');
         } catch (\Exception $e) {
             return redirect()
@@ -85,7 +85,7 @@ class PlantonistaController extends Controller
     public function edit(Plantonista $plantonista)
     {
         $form = $this->formBuilder->create(plantonistaForm::class, [
-            'url' => route('plantonista.update', $plantonista->id),
+            'url' => route('plantonistas.update', $plantonista->id),
             'method' => 'PUT',
             'model' => $plantonista
         ]);
@@ -110,7 +110,7 @@ class PlantonistaController extends Controller
             $plantonista->save();
 
             return redirect()
-                ->route('plantonista.show', $plantonista->id)
+                ->route('plantonistas.show', $plantonista->id)
                 ->with('alert-success', 'Plantonista atualizado com sucesso!');
         } catch (\Exception $e) {
             return redirect()
