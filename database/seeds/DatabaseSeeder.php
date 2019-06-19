@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             PlantonistaTableSeeder::class,
             AtendimentoTableSeeder::class,
             GuiaTableSeeder::class,
+            SessaoTableSeeder::class,
             UserTableSeeder::class
         ]);
     }
