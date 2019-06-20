@@ -3,8 +3,10 @@ Protótipo: Sistema de Gerenciamento de Clínica de Fisioterapia
 
 ## Objetivos do sistema:
 - [x] **Paciente**
+    - [ ] Atualizar padrão de telas (@HigorG)
 
 - [x] **Plantonista**
+    -[ ] Atualizar padrão de telas (@dav3sk)
 
 - [ ] **Guia**
     - [x] Model
@@ -14,7 +16,7 @@ Protótipo: Sistema de Gerenciamento de Clínica de Fisioterapia
     - [x] Form
     - [x] Controller
     - [x] Rotas
-    - [ ] Blades
+    - [ ] Blades (@HigorG)
 
 - [ ] **Atendimento**
     - [x] Model
@@ -24,14 +26,14 @@ Protótipo: Sistema de Gerenciamento de Clínica de Fisioterapia
     - [x] Form
     - [x] Controller
     - [x] Rotas
-    - [ ] Blades
+    - [ ] Blades (@dav3sk)
 
 - [ ] **Sessão**
     - [x] Model
     - [x] Migration
     - [x] Factory
     - [x] Seeder
-    - [ ] Form
-    - [ ] Controller
-    - [ ] Rotas
-    - [ ] Blades
+    - [ ] Form (@hdoidao)
+    - [ ] Controller (@hdoidao)
+    - [ ] Rotas (@hdoidao)
+    - [ ] Blades (@hdoidao)
