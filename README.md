@@ -1,12 +1,12 @@
 # SGFisio
 Protótipo: Sistema de Gerenciamento de Clínica de Fisioterapia
 
-Objetivos do sistema
-- [x] Paciente
+## Objetivos do sistema:
+- [x] **Paciente**
 
-- [x] Plantonista
+- [x] **Plantonista**
 
-- [ ] Guia
+- [ ] **Guia**
     - [x] Model
     - [x] Migration
     - [x] Factory
@@ -16,7 +16,7 @@ Objetivos do sistema
     - [x] Rotas
     - [ ] Blades
 
-- [ ] Atendimento
+- [ ] **Atendimento**
     - [x] Model
     - [x] Migration
     - [x] Factory
@@ -26,7 +26,7 @@ Objetivos do sistema
     - [x] Rotas
     - [ ] Blades
 
-- [ ] Sessão
+- [ ] **Sessão**
     - [x] Model
     - [x] Migration
     - [x] Factory
