@@ -30,14 +30,14 @@ class GuiaController extends Controller
      */
     public function create()
     {
-        // $form = $this->formBuilder->create(PacienteForm::class, [
-        //     'url' => route('guias.store'),
-        //     'method' => 'POST'
-        // ]);
+        $form = $this->formBuilder->create(GuiaForm::class, [
+            'url' => route('guias.store'),
+            'method' => 'POST'
+        ]);
 
-        // return view('guias.create', [
-        //     'form' => $form
-        // ]);
+        return view('guias.create', [
+            'form' => $form
+        ]);
     }
 
     /**
