@@ -8,6 +8,7 @@ Protótipo: Sistema de Gerenciamento de Clínica de Fisioterapia
 - [x] **Plantonista**
     - [ ] Atualizar padrão de telas (@dav3sk)
 
+
 - [ ] **Guia**
     - [x] Model
     - [x] Migration
