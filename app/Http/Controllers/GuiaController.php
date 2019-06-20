@@ -84,7 +84,7 @@ class GuiaController extends Controller
      */
     public function edit(Guia $guia)
     {
-        $form = $this->formBuilder->create(PacienteForm::class, [
+        $form = $this->formBuilder->create(GuiaForm::class, [
             'url' => route('guias.update', $guia->id),
             'method' => 'PUT',
             'model' => $guia
