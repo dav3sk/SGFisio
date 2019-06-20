@@ -152,8 +152,8 @@ return [
             'submenu' => [
                 [
                     'text' => 'Atendimentos',
-                    'route'  => 'home',
-                    'active' => ['a']
+                    'route'  => 'atendimentos.index',
+                    'active' => ['atendimentos']
                 ],
                 [
                     'text' => 'Sessões',
