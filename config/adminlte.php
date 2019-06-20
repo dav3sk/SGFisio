@@ -136,13 +136,13 @@ return [
             'submenu' => [
                 [
                     'text' => 'Cadastrar',
-                    'route'  => 'home',
-                    'active' => ['a']
+                    'route'  => 'guias.create',
+                    'active' => ['guias/create']
                 ],
                 [
                     'text' => 'Listar',
-                    'route'  => 'home',
-                    'active' => ['a']
+                    'route'  => 'guias.index',
+                    'active' => ['guias']
                 ]
             ]
         ],

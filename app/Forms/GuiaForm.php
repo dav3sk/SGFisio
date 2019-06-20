@@ -3,6 +3,7 @@
 namespace App\Forms;
 
 use Kris\LaravelFormBuilder\Form;
+use App\Forms\Field;
 
 class GuiaForm extends Form
 {
@@ -18,11 +19,11 @@ class GuiaForm extends Form
                 'rules' => 'required'
             ])
             ->add('tempo_de_lesao', Field::DATE, [
-                'label' => 'Data de Nascimento',
+                'label' => 'Tempo de lesão',
                 'rules' => 'required'
             ])
             ->add('prioridade', Field::SELECT, [
-                'label' => 'CPF',
+                'label' => 'Prioridade',
                 'choices' => [
                     1 => '1',
                     2 => '2',
@@ -32,6 +33,9 @@ class GuiaForm extends Form
                 ],
                 'empty_value' => 'Selecione uma opção',
                 'rules' => 'required'
+            ])
+            ->add('submit', Field::BUTTON_SUBMIT, [
+                'label' => 'Cadastrar'
             ]);
     }
 }
