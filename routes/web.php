@@ -60,3 +60,17 @@ Route::group(['prefix' => 'guias'], function () {
 
     Route::delete('/{guia}/destroy', 'GuiaController@destroy')->name('guias.destroy');
 });
+
+// Rotas Atendimento
+Route::group(['prefix' => 'atendimento'], function () {
+    Route::get('/create', 'AtendimentoController@create')->name('atendimentos.create');
+    Route::post('/', 'AtendimentoController@store')->name('atendimentos.store');
+
+    Route::get('/', 'AtendimentoController@index')->name('atendimentos.index');
+    Route::get('/{atendimento}', 'AtendimentoController@show')->name('atendimentos.show');
+
+    Route::get('/{atendimento}/edit', 'AtendimentoController@edit')->name('atendimentos.edit');
+    Route::put('/{atendimento}', 'AtendimentoController@update')->name('atendimentos.update');
+
+    Route::delete('/{atendimento}/destroy', 'AtendimentoController@destroy')->name('atendimentos.destroy');
+});
