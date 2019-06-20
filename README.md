@@ -3,7 +3,7 @@ Protótipo: Sistema de Gerenciamento de Clínica de Fisioterapia
 
 ## Objetivos do sistema:
 - [x] **Paciente**
-    - [ ] Atualizar padrão de telas (@HigorG)
+    - [X] Atualizar padrão de telas (@HigorG)
 
 - [x] **Plantonista**
     - [ ] Atualizar padrão de telas (@dav3sk)
