@@ -5,16 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Atendimento extends Model
+class Sessao extends Model
 {
     use SoftDeletes;
 
     protected $fillable = [
-        'CID',
-        'tipo_atendimento',
-        'quantidade_sessoes',
-        'inicio',
-        'fim'
+        'data_hora',
+        'evolucao'
     ];
 
     protected $dates = [
@@ -30,18 +27,18 @@ class Atendimento extends Model
     ];
 
     /**
-     * Pertence a uma guia
+     * Pertence a um atendimento
      */
-    public function guia()
+    public function atendimento()
     {
-        return $this->belongsTo(Guia::class);
+        return $this->belongsTo(Atendimento::class);
     }
 
     /**
-     * Possui varias sessoes
+     * Sessao e realizada por um plantonista
      */
-    public function sessoes()
+    public function plantonista()
     {
-        return $this->hasMany(Sessao::class);
+        return $this->belongsTo(Plantonista::class);
     }
 }

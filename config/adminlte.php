@@ -121,7 +121,7 @@ return [
                 [
                     'text' => 'Cadastrar',
                     'route'  => 'pacientes.create',
-                    'active' => ['pacientes']
+                    'active' => ['pacientes/create']
                 ],
                 [
                     'text' => 'Listar',
@@ -132,9 +132,19 @@ return [
         ],
         [
             'text' => 'Guias',
-            'route'  => 'home',
             'icon' => 'list-ul',
-            'active' => ['a']
+            'submenu' => [
+                [
+                    'text' => 'Cadastrar',
+                    'route'  => 'home',
+                    'active' => ['a']
+                ],
+                [
+                    'text' => 'Listar',
+                    'route'  => 'home',
+                    'active' => ['a']
+                ]
+            ]
         ],
         [
             'text' => 'Atendimentos',
@@ -142,8 +152,8 @@ return [
             'submenu' => [
                 [
                     'text' => 'Atendimentos',
-                    'route'  => 'home',
-                    'active' => ['a']
+                    'route'  => 'atendimentos.index',
+                    'active' => ['atendimentos']
                 ],
                 [
                     'text' => 'Sessões',
@@ -154,9 +164,19 @@ return [
         ],
         [
             'text' => 'Plantonistas',
-            'route'  => 'home',
             'icon' => 'user-circle',
-            'active' => ['a']
+            'submenu' => [
+                [
+                    'text' => 'Cadastrar',
+                    'route'  => 'plantonistas.create',
+                    'active' => ['plantonistas/create']
+                ],
+                [
+                    'text' => 'Listar',
+                    'route'  => 'plantonistas.index',
+                    'active' => ['plantonistas']
+                ]
+            ]
         ]
     ],
 

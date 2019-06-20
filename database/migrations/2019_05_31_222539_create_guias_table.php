@@ -21,6 +21,7 @@ class CreateGuiasTable extends Migration
             $table->text('diagnostico');
             $table->date('tempo_de_lesao');
             $table->integer('prioridade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

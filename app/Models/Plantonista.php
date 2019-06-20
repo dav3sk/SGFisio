@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Paciente extends Model
+class Plantonista extends Model
 {
     use SoftDeletes;
 
     protected $fillable = [
         'nome',
+        'email',
+        'crefito',
         'sexo',
         'data_nascimento',
         'cpf',
@@ -30,12 +32,4 @@ class Paciente extends Model
         'updated_at',
         'deleted_at'
     ];
-
-    /**
-     * Possui varias guias
-     */
-    public function guias()
-    {
-        return $this->hasMany(Guia::class);
-    }
 }

@@ -15,7 +15,7 @@ class CreateAtendimentosTable extends Migration
     {
         Schema::create('atendimentos', function (Blueprint $table) {
             $table->bigIncrements('id')->primaryKey();
-            $table->integer('guia_id')->unsigned();
+            $table->integer('guia_id')->unsigned()->nullable(false);
             $table->foreign('guia_id')->references('id')->on('guias');
             $table->string('CID');
             $table->enum('tipo_atendimento', [
@@ -26,6 +26,7 @@ class CreateAtendimentosTable extends Migration
             $table->integer('quantidade_sessoes');
             $table->date('inicio');
             $table->date('fim');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
