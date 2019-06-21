@@ -15,7 +15,7 @@ class PlantonistaForm extends Form
                 'rules' => 'required|string'
             ])
             ->add('email', Field::EMAIL, [
-                'label' => 'email',
+                'label' => 'Email',
                 'rules' => 'required'
             ])
             ->add('sexo', Field::SELECT, [
@@ -48,7 +48,7 @@ class PlantonistaForm extends Form
                 'rules' => 'required|string'
             ])
             ->add('telefone', Field::TEL, [
-                'label' => 'telefone',
+                'label' => 'Telefone',
                 'rules' => 'required|string'
             ])
             ->add('submit', Field::BUTTON_SUBMIT, [

@@ -138,12 +138,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Cadastrar',
-                    'route'  => 'home',
+                    'route'  => 'guias.create',
                     'active' => ['guias/create']
                 ],
                 [
                     'text' => 'Listar',
-                    'route'  => 'home',
+                    'route'  => 'guias.index',
                     'active' => ['guias']
                 ]
             ]
