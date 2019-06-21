@@ -9,7 +9,7 @@ Protótipo: Sistema de Gerenciamento de Clínica de Fisioterapia
     - [ ] Atualizar padrão de telas (@dav3sk)
 
 
-- [ ] **Guia**
+- [X] **Guia**
     - [x] Model
     - [x] Migration
     - [x] Factory
@@ -17,7 +17,7 @@ Protótipo: Sistema de Gerenciamento de Clínica de Fisioterapia
     - [x] Form
     - [x] Controller
     - [x] Rotas
-    - [ ] Blades        (@HigorG)
+    - [X] Blades        (@HigorG)
 
 - [ ] **Atendimento**
     - [x] Model
