@@ -117,6 +117,7 @@ return [
         [
             'text' => 'Pacientes',
             'icon' => 'users',
+            'active' => ['pacientes', 'pacientes/*'],
             'submenu' => [
                 [
                     'text' => 'Cadastrar',
@@ -133,22 +134,24 @@ return [
         [
             'text' => 'Guias',
             'icon' => 'list-ul',
+            'active' => ['guias', 'guias/*'],
             'submenu' => [
                 [
                     'text' => 'Cadastrar',
                     'route'  => 'home',
-                    'active' => ['a']
+                    'active' => ['guias/create']
                 ],
                 [
                     'text' => 'Listar',
                     'route'  => 'home',
-                    'active' => ['a']
+                    'active' => ['guias']
                 ]
             ]
         ],
         [
             'text' => 'Atendimentos',
             'icon' => 'address-book',
+            'active' => ['atendimentos', 'atendimentos/*'],
             'submenu' => [
                 [
                     'text' => 'Atendimentos',
@@ -165,6 +168,7 @@ return [
         [
             'text' => 'Plantonistas',
             'icon' => 'user-circle',
+            'active' => ['plantonistas', 'plantonistas/*'],
             'submenu' => [
                 [
                     'text' => 'Cadastrar',
