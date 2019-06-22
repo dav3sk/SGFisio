@@ -10,17 +10,11 @@ class AtendimentoForm extends Form
     public function buildForm()
     {
         $this
-            ->add('guia_id', Field::SELECT, [
+            ->add('guia_id', Field::ENTITY, [
                 'label' => 'Guia',
-                'choices' => [
-                    1 => '1',
-                    2 => '2',
-                    3 => '3',
-                    4 => '4',
-                    5 => '5',
-                ],
-                'empty_value' => 'Selecione uma opção',
-                'rules' => 'required'
+                'class' => Guia::class,
+                'property' => 'data_emissao',
+                'query_builder' => Guia::with(['paciente'])
             ])
             ->add('CID', Field::TEXT, [
                 'label' => 'Código CID',
