@@ -2,6 +2,7 @@
 
 namespace App\Forms;
 
+use App\Models\Guia;
 use Kris\LaravelFormBuilder\Form;
 
 class AtendimentoForm extends Form
@@ -9,6 +10,18 @@ class AtendimentoForm extends Form
     public function buildForm()
     {
         $this
+            ->add('guia_id', Field::SELECT, [
+                'label' => 'Guia',
+                'choices' => [
+                    1 => '1',
+                    2 => '2',
+                    3 => '3',
+                    4 => '4',
+                    5 => '5',
+                ],
+                'empty_value' => 'Selecione uma opção',
+                'rules' => 'required'
+            ])
             ->add('CID', Field::TEXT, [
                 'label' => 'Código CID',
                 'rules' => 'required'
@@ -28,6 +41,9 @@ class AtendimentoForm extends Form
             ->add('fim', Field::DATE, [
                 'label' => 'Data de Termino',
                 'rules' => 'required'
+            ])
+            ->add('submit', Field::BUTTON_SUBMIT, [
+                'label' => 'Cadastrar'
             ]);
     }
 }
