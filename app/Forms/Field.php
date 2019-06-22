@@ -17,7 +17,7 @@ class Field
     const STATIC = 'static';
     //Date time fields
     const DATE = 'date';
-    const DATETIME_LOCAL = 'datetime_local';
+    const DATETIME_LOCAL = 'datetime-local';
     const MONTH = 'month';
     const TIME = 'time';
     const WEEK = 'week';
@@ -30,6 +30,7 @@ class Field
     const TEL = 'tel';
     const NUMBER = 'number';
     const RANGE = 'range';
+    const ENTITY = 'entity';
     //Buttons
     const BUTTON_SUBMIT = 'submit';
     const BUTTON_RESET = 'reset';
