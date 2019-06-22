@@ -172,13 +172,13 @@ return [
             'submenu' => [
                 [
                     'text' => 'Cadastrar',
-                    'route'  => 'sessao.create',
-                    'active' => ['sessao/create']
+                    'route'  => 'sessoes.create',
+                    'active' => ['sessoes/create']
                 ],
                 [
                     'text' => 'Listar',
-                    'route'  => 'sessao.index',
-                    'active' => ['sessao']
+                    'route'  => 'sessoes.index',
+                    'active' => ['sessoes']
                 ]
             ]
         ],
