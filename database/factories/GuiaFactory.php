@@ -8,7 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(Guia::class, function (Faker $faker) {
     return [
         'data_emissao' => $faker->date(),
-        'diagnostico' => $faker->text(),
+        'diagnostico' => $faker->sentence(3),
         'tempo_de_lesao' => $faker->date(),
         'prioridade' => rand(1,5)
     ];
