@@ -76,16 +76,15 @@ Route::group(['prefix' => 'atendimento'], function () {
 });
 
 // Rotas Sessões
+Route::group(['prefix' => 'sessoes'], function(){
+    Route::get('/create', 'SessaoController@create')->name('sessoes.create');
+    Route::post('/', 'SessaoController@store')->name('sessoes.store');
 
-Route::group(['prefix' => 'sessao'], function(){
-    Route::get('/create', 'SessaoController@create')->name('sessao.create');
-    Route::post('/', 'SessaoController@store')->name('sessao.store');
+    Route::get('/', 'SessaoController@index')->name('sessoes.index');
+    Route::get('/{sessao}', 'SessaoController@show')->name('sessoes.show');
 
-    Route::get('/', 'SessaoController@index')->name('sessao.index');
-    Route::get('/{sessao}', 'SessaoController@show')->name('sessao.show');
+    Route::get('/{sessao}/edit', 'SessaoController@edit')->name('sessoes.edit');
+    Route::put('/{sessao}', 'SessaoController@update')->name('sessoes.update');
 
-    Route::get('/{sessao}/edit', 'SessaoController@edit')->name('sessao.edit');
-    Route::put('/{sessao}', 'SessaoController@update')->name('sessao.update');
-
-    Route::delete('/{sessao}/destroy', 'SessaoController@destroy')->name('sessao.destroy');
+    Route::delete('/{sessao}/destroy', 'SessaoController@destroy')->name('sessoes.destroy');
 });
