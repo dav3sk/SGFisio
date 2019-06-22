@@ -18,9 +18,10 @@
                 <thead>
                     <tr>
                         <th class="text-center">#</th>
+                        <th class="text-center">Paciente</th>
                         <th class="text-center">Prioridade</th>
                         <th class="text-center">Data de Emissão</th>
-                        <th class="text-center" style="width: 60%;">Diagnostico</th>
+                        <th class="text-center">Diagnostico</th>
                         <th class="text-center">Ação</th>
                     </tr>
                 </thead>
@@ -28,6 +29,11 @@
                     @foreach ($guias as $guia)
                         <tr class="text-center">
                             <td>{{ $guia->id }}</td>
+                            @if ($guia->paciente != NULL)
+                                <td>{{ $guia->paciente()->get('nome') }}</td>
+                            @else
+                                <td>-</td>
+                            @endif
                             <td>{{ $guia->prioridade }}</td>
                             <td>{{ $guia->data_emissao }}</td>
                             <td>{{ $guia->diagnostico }}</td>
