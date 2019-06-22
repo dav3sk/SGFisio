@@ -169,6 +169,18 @@ return [
             'text' => 'Sessões',
             'icon' => 'book',
             'active' => ['sessoes', 'sessoes/*'],
+            'submenu' => [
+                [
+                    'text' => 'Cadastrar',
+                    'route'  => 'sessao.create',
+                    'active' => ['sessao/create']
+                ],
+                [
+                    'text' => 'Listar',
+                    'route'  => 'sessao.index',
+                    'active' => ['sessao']
+                ]
+            ]
         ],
         [
             'text' => 'Plantonistas',
