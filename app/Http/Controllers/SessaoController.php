@@ -6,6 +6,7 @@ use App\Models\Sessao;
 use App\Forms\SessaoForm;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class SessaoController extends Controller
 {
@@ -31,7 +32,7 @@ class SessaoController extends Controller
     public function create()
     {
         $form = $this->formBuilder->create(SessaoForm::class, [
-            'url' => route('sessao.store'),
+            'url' => route('sessoes.store'),
             'method' => 'POST'
         ]);
 
@@ -54,7 +55,7 @@ class SessaoController extends Controller
             $sessao->save();
 
             return redirect()
-                ->route('sessao.index')
+                ->route('sessoes.index')
                 ->with('alert-success', 'Sessão cadastrada com sucesso!');
         } catch (\Exception $e) {
             return redirect()
@@ -71,8 +72,16 @@ class SessaoController extends Controller
      */
     public function show(Sessao $sessao)
     {
+        $atendimento = DB::table('atendimentos')->where('id', $sessao->atendimento_id)->first();
+        $guia = DB::table('guias')->where('id', $atendimento->guia_id)->first();
+        $paciente = DB::table('pacientes')->where('id', $guia->paciente_id)->first();
+        $plantonista = DB::table('plantonistas')->where('id', $sessao->plantonista_id)->first();
+
         return view('sessao.show', [
-            'sessao' => $sessao
+            'sessao' => $sessao,
+            'atendimento' => $atendimento,
+            'paciente' => $paciente,
+            'plantonista' => $plantonista
         ]);
     }
 
@@ -85,7 +94,7 @@ class SessaoController extends Controller
     public function edit(Sessao $sessao)
     {
         $form = $this->formBuilder->create(SessaoForm::class, [
-            'url' => route('sessao.update', $sessao->id),
+            'url' => route('sessoes.update', $sessao->id),
             'method' => 'PUT',
             'model' => $sessao
         ]);
@@ -94,7 +103,7 @@ class SessaoController extends Controller
             'form' => $form
         ]);
     }
- 
+
     /**
      * Update the specified resource in storage.
      *
@@ -110,7 +119,7 @@ class SessaoController extends Controller
             $sessao->save();
 
             return redirect()
-                ->route('sessao.show', $sessao->id)
+                ->route('sessoes.show', $sessao->id)
                 ->with('alert-success', 'Sessao atualizada com sucesso!');
         } catch (\Exception $e) {
             return redirect()
