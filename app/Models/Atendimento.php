@@ -10,6 +10,7 @@ class Atendimento extends Model
     use SoftDeletes;
 
     protected $fillable = [
+        'guia_id',
         'CID',
         'tipo_atendimento',
         'quantidade_sessoes',
@@ -34,7 +35,7 @@ class Atendimento extends Model
      */
     public function guia()
     {
-        return $this->belongsTo(Guia::class);
+        return $this->belongsTo(Guia::class, 'guia_id');
     }
 
     /**
