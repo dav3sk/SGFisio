@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Guia;
+use App\Models\Paciente;
 use App\Forms\GuiaForm;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class GuiaController extends Controller
 {
@@ -16,7 +18,7 @@ class GuiaController extends Controller
      */
     public function index()
     {
-        $guias = Guia::all();
+        $guias = Guia::with(['paciente'])->get();
 
         return view('guias.index', [
             'guias' => $guias
@@ -71,8 +73,11 @@ class GuiaController extends Controller
      */
     public function show(Guia $guia)
     {
+        $paciente = DB::table('pacientes')->where('id', $guia->paciente_id)->first();
+
         return view('guias.show', [
-            'guia' => $guia
+            'guia' => $guia,
+            'paciente' => $paciente
         ]);
     }
 
