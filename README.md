@@ -13,31 +13,7 @@ Protótipo: Sistema de Gerenciamento de Clínica de Fisioterapia
     - [X] Atualizar padrão de telas (@HigorG)
 
 - [X] **Guia**
-    - [x] Model
-    - [x] Migration
-    - [x] Factory
-    - [x] Seeder
-    - [x] Form
-    - [x] Controller
-    - [x] Rotas
-    - [X] Blades        (@HigorG)
 
 - [X] **Atendimento**
-    - [x] Model
-    - [x] Migration
-    - [x] Factory
-    - [x] Seeder
-    - [x] Form
-    - [x] Controller
-    - [x] Rotas
-    - [X] Blades        (@HigorG)
 
-- [ ] **Sessão**
-    - [x] Model
-    - [x] Migration
-    - [x] Factory
-    - [x] Seeder
-    - [ ] Form          (@hdoidao)
-    - [ ] Controller    (@hdoidao)
-    - [ ] Rotas         (@hdoidao)
-    - [ ] Blades        (@hdoidao)
+- [x] **Sessão**
