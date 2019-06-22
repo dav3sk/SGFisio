@@ -4,12 +4,19 @@ namespace App\Forms;
 
 use Kris\LaravelFormBuilder\Form;
 use App\Forms\Field;
+use App\Models\Paciente;
 
 class GuiaForm extends Form
 {
     public function buildForm()
     {
         $this
+            ->add('paciente_id', 'entity', [
+                'label' => 'Paciente',
+                'class' => Paciente::class,
+                'property' => 'nome',
+                'query_builder' => Paciente::all()
+            ])
             ->add('data_emissao', Field::DATE, [
                 'label' => 'Data de emissão',
                 'rules' => 'required'
