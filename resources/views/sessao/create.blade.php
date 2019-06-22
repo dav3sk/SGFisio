@@ -12,7 +12,7 @@
 
 @section('content')
     @include('helpers._button_voltar', [
-        'rota' => 'sessao.index'
+        'rota' => 'sessoes.index'
     ])
     @include('sessao._form', [
         'form' => $form

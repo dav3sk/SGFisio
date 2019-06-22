@@ -18,10 +18,11 @@
                 <thead>
                     <tr>
                         <th class="text-center">#</th>
-                        <th class="text-center">Data e Hora</th>
+                        <th class="text-center">Data</th>
+                        <th class="text-center">Horário</th>
                         <th class="text-center">Atendimento Id</th>
                         <th class="text-center">Plantonista Id</th>
-                        <th class="text-center" style="width: 60%;">Evolução</th>
+                        <th class="text-center">Evolução</th>
                         <th class="text-center">Ação</th>
                     </tr>
                 </thead>
@@ -29,18 +30,19 @@
                     @foreach ($sessao as $sessao)
                         <tr class="text-center">
                             <td>{{ $sessao->id }}</td>
-                            <td>{{ $sessao->data_hora }}</td>
+                            <td>{{ $sessao->data }}</td>
+                            <td>{{ $sessao->horario }}</td>
                             <td>{{ $sessao->atendimento_id }}</td>
                             <td>{{ $sessao->plantonista_id }}</td>
                             <td>{{ $sessao->evolucao }}</td>
                             <td>
-                                <a class="btn btn-xs" href="{{ route('sessao.show', $sessao->id) }}">
+                                <a class="btn btn-xs" href="{{ route('sessoes.show', $sessao->id) }}">
                                     <i class="fa fa-eye" style="font-size: 20px;"></i>
                                 </a>
-                                <a class="btn btn-xs" href="{{ route('sessao.edit', $sessao->id) }}">
+                                <a class="btn btn-xs" href="{{ route('sessoes.edit', $sessao->id) }}">
                                     <i class="fa fa-edit" style="font-size: 20px;"></i>
                                 </a>
-                                <a class="btn btn-xs sessao-destroy" data-id="{{ $sessao->id }}">
+                                <a class="btn btn-xs sessoes-destroy" data-id="{{ $sessao->id }}">
                                     <i class="fa fa-trash" style="font-size: 20px;"></i>
                                 </a>
                             </td>
@@ -55,8 +57,8 @@
 @section('js')
     <script src="//unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-        $('.sessao-destroy').on('click', function () {
-            var atendimentoId = $(this).data('id');
+        $('.sessoes-destroy').on('click', function () {
+            var sessaoId = $(this).data('id');
 
             swal("Confirma a exclusão da sessão?", {
                 buttons: {
@@ -71,7 +73,7 @@
                 switch (value) {
                     case "confirm":
                         $.ajax({
-                            url: '{{ route('sessao.destroy', '_user') }}'.replace('_user', sessaoId),
+                            url: '{{ route('sessoes.destroy', '_user') }}'.replace('_user', sessaoId),
                             method: 'DELETE',
                             success: function (xhr) {
                                 swal("Sucesso!", "Sessão deletada", "success");
