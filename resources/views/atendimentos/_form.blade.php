@@ -4,15 +4,26 @@
             <div class="col-md-6">
                 <div class="box box-success" style="border: 1px solid #d2d6de;">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Informações do atendimento</h3>
-                    </div>
-                    
-                    <div class="box-body">
-                        <div class="form-group">
-                            {!! form_label($form->guia_id) !!}
-                            {!! form_widget($form->guia_id) !!}
+                            <h3 class="box-title">Guia referente</h3>
                         </div>
 
+                        <div class="box-body">
+                            <div class="form-group">
+                                {!! form_label($form->guia_id) !!}
+                                {!! form_widget($form->guia_id) !!}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="box box-success" style="border: 1px solid #d2d6de;">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Informações do atendimento</h3>
+                    </div>
+
+                    <div class="box-body">
                         <div class="form-group">
                             {!! form_label($form->CID) !!}
                             {!! form_widget($form->CID) !!}
@@ -40,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-12" style="padding-bottom: 10px;">
                 {!! form_widget($form->submit) !!}
             </div>
