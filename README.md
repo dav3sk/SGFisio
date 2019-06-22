@@ -18,7 +18,7 @@ Protótipo: Sistema de Gerenciamento de Clínica de Fisioterapia
     - [x] Rotas
     - [X] Blades        (@HigorG)
 
-- [ ] **Atendimento**
+- [X] **Atendimento**
     - [x] Model
     - [x] Migration
     - [x] Factory
@@ -26,7 +26,7 @@ Protótipo: Sistema de Gerenciamento de Clínica de Fisioterapia
     - [x] Form
     - [x] Controller
     - [x] Rotas
-    - [ ] Blades        (@dav3sk)
+    - [X] Blades        (@HigorG)
 
 - [ ] **Sessão**
     - [x] Model
