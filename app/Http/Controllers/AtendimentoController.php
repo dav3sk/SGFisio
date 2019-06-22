@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Atendimento;
 use App\Forms\AtendimentoForm;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AtendimentoController extends Controller
 {
@@ -70,8 +71,15 @@ class AtendimentoController extends Controller
      */
     public function show(Atendimento $atendimento)
     {
+        $guia = DB::table('guias')->where('id', $atendimento->guia_id)->first();
+        $paciente = DB::table('pacientes')->where('id', $guia->paciente_id)->first();
+        $sessoes = DB::table('sessaos')->where('atendimento_id', $atendimento->id)->get();
+
         return view('atendimentos.show', [
-            'atendimento' => $atendimento
+            'atendimento' => $atendimento,
+            'guia' => $guia,
+            'paciente' => $paciente,
+            'sessoes' => $sessoes
         ]);
     }
 
