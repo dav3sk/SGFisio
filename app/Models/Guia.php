@@ -10,6 +10,7 @@ class Guia extends Model
     use SoftDeletes;
 
     protected $fillable = [
+        'paciente_id',
         'data_emissao',
         'diagnostico',
         'tempo_de_lesao',
