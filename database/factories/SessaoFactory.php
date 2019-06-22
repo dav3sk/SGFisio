@@ -11,7 +11,8 @@ $factory->define(Sessao::class, function (Faker $faker) {
     return [
         'atendimento_id' => Atendimento::inRandomOrder()->get()->first()->id,
         'plantonista_id' => Plantonista::inRandomOrder()->get()->first()->id,
-        'data_hora' => $faker->dateTime(),
+        'data' => $faker->date(),
+        'horario' => $faker->time(),
         'evolucao' => $faker->sentence(6)
     ];
 });

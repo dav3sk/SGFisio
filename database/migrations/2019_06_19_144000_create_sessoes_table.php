@@ -19,7 +19,8 @@ class CreateSessoesTable extends Migration
             $table->foreign('atendimento_id')->references('id')->on('atendimento');
             $table->integer('plantonista_id')->unsigned()->nullable();
             $table->foreign('plantonista_id')->references('id')->on('plantonista');
-            $table->dateTime('data_hora');
+            $table->date('data');
+            $table->time('horario');
             $table->text('evolucao');
             $table->softDeletes();
             $table->timestamps();

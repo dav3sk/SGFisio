@@ -10,7 +10,10 @@ class Sessao extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'data_hora',
+        'atendimento_id',
+        'plantonista_id',
+        'data',
+        'horario',
         'evolucao'
     ];
 
@@ -39,6 +42,6 @@ class Sessao extends Model
      */
     public function plantonista()
     {
-        return $this->belongsTo(Plantonista::class);
+        return $this->belongsTo(Plantonista::class, 'id');
     }
 }
