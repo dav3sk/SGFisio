@@ -151,19 +151,24 @@ return [
         [
             'text' => 'Atendimentos',
             'icon' => 'address-book',
-            'active' => ['atendimentos', 'atendimentos/*'],
+            'active' => ['atendimento', 'atendimento/*'],
             'submenu' => [
                 [
-                    'text' => 'Atendimentos',
-                    'route'  => 'atendimentos.index',
-                    'active' => ['atendimentos']
+                    'text' => 'Cadastrar',
+                    'route'  => 'atendimentos.create',
+                    'active' => ['atendimento/create']
                 ],
                 [
-                    'text' => 'Sessões',
-                    'route'  => 'home',
-                    'active' => ['a']
+                    'text' => 'Listar',
+                    'route'  => 'atendimentos.index',
+                    'active' => ['atendimento']
                 ]
             ]
+        ],
+        [
+            'text' => 'Sessões',
+            'icon' => 'book',
+            'active' => ['sessoes', 'sessoes/*'],
         ],
         [
             'text' => 'Plantonistas',
