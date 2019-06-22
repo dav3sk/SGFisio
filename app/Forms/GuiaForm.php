@@ -11,7 +11,7 @@ class GuiaForm extends Form
     public function buildForm()
     {
         $this
-            ->add('paciente_id', 'entity', [
+            ->add('paciente_id', Field::ENTITY, [
                 'label' => 'Paciente',
                 'class' => Paciente::class,
                 'property' => 'nome',
