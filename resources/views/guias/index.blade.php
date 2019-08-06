@@ -30,7 +30,7 @@
                         <tr class="text-center">
                             <td>{{ $guia->id }}</td>
                             @if ($guia->paciente != NULL)
-                                <td>{{ $guia->paciente()->get('nome') }}</td>
+                                <td>{{ $guia->paciente->nome }}</td>
                             @else
                                 <td>-</td>
                             @endif
