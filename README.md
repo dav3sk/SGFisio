@@ -1,17 +1,29 @@
 # SGFisio
-Protótipo: Sistema de Gerenciamento de Clínica de Fisioterapia
+Sistema de Gerenciamento de Clínica de Fisioterapia
 
-# Correções
-- [ ] **Atendimento**
-    - [ ] Alterar SELECT field de guias para obter as guias do banco propriamente
+## Descrição
+Protótipo de sistema de gerenciamento de agendas de atendimento de clínica de fisioterapia. 
 
-## Objetivos do sistema:
-- [x] **Paciente**
+## Configuração
 
-- [x] **Plantonista**
+Configurar base de dados no .env.
+```
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+```
+## Instalação
 
-- [X] **Guia**
+```bash
+composer install
+php artisan vendor:publish --provider="JeroenNoten\LaravelAdminLte\ServiceProvider" --tag=assets
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
+```
 
-- [X] **Atendimento**
+## Ferramentas
 
-- [x] **Sessão**
+* [Laravel 5.8](https://laravel.com/docs/5.8)
+* [Laravel-AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE)
+* [Laravel 5 form builder](https://github.com/kristijanhusak/laravel-form-builder)
