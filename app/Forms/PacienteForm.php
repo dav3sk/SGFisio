@@ -29,7 +29,6 @@ class PacienteForm extends Form
             ])
             ->add('cpf', Field::TEXT, [
                 'label' => 'CPF',
-                'rules' => 'required'
             ])
             ->add('cidade', Field::TEXT, [
                 'label' => 'Cidade',
@@ -37,6 +36,14 @@ class PacienteForm extends Form
             ])
             ->add('estado', Field::TEXT, [
                 'label' => 'Estado',
+                'rules' => 'required|string'
+            ])
+            ->add('rua', Field::TEXT, [
+                'label' => 'Rua',
+                'rules' => 'required|string'
+            ])
+            ->add('bairro', Field::TEXT, [
+                'label' => 'Bairro',
                 'rules' => 'required|string'
             ])
             ->add('telefone', Field::TEXT, [
