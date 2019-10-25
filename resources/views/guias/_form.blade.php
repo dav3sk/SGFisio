@@ -36,11 +36,6 @@
                         </div>
 
                         <div class="form-group">
-                            {!! form_label($form->tempo_de_lesao) !!}
-                            {!! form_widget($form->tempo_de_lesao) !!}
-                        </div>
-
-                        <div class="form-group">
                             {!! form_label($form->prioridade) !!}
                             {!! form_widget($form->prioridade) !!}
                         </div>
