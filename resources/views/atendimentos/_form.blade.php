@@ -30,8 +30,8 @@
                         </div>
 
                         <div class="form-group">
-                            {!! form_label($form->tipo_atendimento) !!}
-                            {!! form_widget($form->tipo_atendimento) !!}
+                            {!! form_label($form->setor_atendimento) !!}
+                            {!! form_widget($form->setor_atendimento) !!}
                         </div>
 
                         <div class="form-group">

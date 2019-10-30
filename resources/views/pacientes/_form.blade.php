@@ -6,7 +6,7 @@
                     <div class="box-header with-border">
                         <h3 class="box-title">Informações Pessoais</h3>
                     </div>
-                    
+
                     <div class="box-body">
                         <div class="form-group">
                             {!! form_label($form->nome) !!}
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="col-md-6">
                 <div class="box box-success" style="border: 1px solid #d2d6de;">
 
@@ -52,6 +52,16 @@
                         <div class="form-group">
                             {!! form_label($form->estado) !!}
                             {!! form_widget($form->estado) !!}
+                        </div>
+
+                        <div class="form-group">
+                            {!! form_label($form->rua) !!}
+                            {!! form_widget($form->rua) !!}
+                        </div>
+
+                        <div class="form-group">
+                            {!! form_label($form->bairro) !!}
+                            {!! form_widget($form->bairro) !!}
                         </div>
                     </div>
                 </div>

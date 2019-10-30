@@ -20,9 +20,14 @@ class AtendimentoForm extends Form
                 'label' => 'Código CID',
                 'rules' => 'required'
             ])
-            ->add('tipo_atendimento', Field::TEXT, [
-                'label' => 'Tipo de Atendimento',
-                'rules' => 'required'
+            ->add('setor_atendimento', Field::TEXT, [
+                'label' => 'Setor Atendimento',
+                'rules' => 'required',
+                'choices' => [
+                    1 => 'Orto',
+                    2 => 'Neuro',
+                    3 => 'Geronto',
+                ],
             ])
             ->add('quantidade_sessoes', Field::NUMBER, [
                 'label' => 'Quantidade de Sessões',
@@ -34,7 +39,6 @@ class AtendimentoForm extends Form
             ])
             ->add('fim', Field::DATE, [
                 'label' => 'Data de Termino',
-                'rules' => 'required'
             ])
             ->add('submit', Field::BUTTON_SUBMIT, [
                 'label' => 'Cadastrar'
