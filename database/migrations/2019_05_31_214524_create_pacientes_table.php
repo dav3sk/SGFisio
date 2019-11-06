@@ -21,7 +21,7 @@ class CreatePacientesTable extends Migration
                 'feminino'
             ]);
             $table->date('data_nascimento');
-            $table->string('cpf', 11)->unique();
+            $table->string('cpf', 11)->nullable;
             $table->string('cidade');
             $table->string('estado');
             $table->string('telefone');
