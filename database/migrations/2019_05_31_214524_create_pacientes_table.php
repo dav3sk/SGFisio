@@ -22,7 +22,7 @@ class CreatePacientesTable extends Migration
             ]);
 
             $table->date('data_nascimento');
-            $table->string('cpf', 11)->unique()->nullable();
+            $table->string('cpf', 11)->unique();
             $table->string('cidade');
             $table->string('estado');
             $table->string('telefone');

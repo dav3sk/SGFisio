@@ -19,8 +19,8 @@ class CreateGuiasTable extends Migration
             $table->foreign('paciente_id')->references('id')->on('pacientes');
             $table->date('data_emissao');
             $table->text('diagnostico');
-            
-            $table->date('tempo_de_lesao')->nullable();
+
+            $table->date('tempo_de_lesao');
             $table->integer('prioridade');
             $table->softDeletes();
             $table->timestamps();
