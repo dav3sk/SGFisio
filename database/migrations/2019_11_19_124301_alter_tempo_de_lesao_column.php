@@ -14,7 +14,7 @@ class AlterTempoDeLesaoColumn extends Migration
     public function up()
     {
         Schema::table('guias', function (Blueprint $table) {
-            $table->date('tempo_de_lesao')->nullable();
+            $table->date('tempo_de_lesao')->nullable()->change();
         });
     }
 
@@ -26,7 +26,7 @@ class AlterTempoDeLesaoColumn extends Migration
     public function down()
     {
         Schema::table('guias', function (Blueprint $table) {
-            $table->dropColumn('tempo_de_lesao');
+            $table->date('tempo_de_lesao')->change();
         });
     }
 }

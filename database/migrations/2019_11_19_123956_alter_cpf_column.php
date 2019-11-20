@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class AlterCpfColumn extends Migration
 {
@@ -14,7 +14,7 @@ class AlterCpfColumn extends Migration
     public function up()
     {
         Schema::table('pacientes', function (Blueprint $table) {
-            $table->string('cpf', 11)->nullable();
+            $table->string('cpf', 11)->nullable()->change();
         });
     }
 
@@ -26,7 +26,7 @@ class AlterCpfColumn extends Migration
     public function down()
     {
         Schema::table('pacientes', function (Blueprint $table) {
-            $table->dropColumn('cpf');
+            $table->string('cpf', 11)->change();;
         });
     }
 }
